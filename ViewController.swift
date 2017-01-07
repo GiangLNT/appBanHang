@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         tbl.register(Cell.self, forCellReuseIdentifier: "Cell")
         tbl.register(Cell2.self, forCellReuseIdentifier: "Cell2")
         tbl.estimatedRowHeight = 100
+    
         tbl.rowHeight = UITableViewAutomaticDimension
         tbl.dataSource = self
         return tbl
@@ -33,10 +34,7 @@ class ViewController: UIViewController {
         coll.dataSource = self
         return coll
     }()
-    func setupCollView(){
-        viewtrang.addSubview(collView)
-        viewtrang.addContrainsWithVS(format: "V:|-64-[v0]|", views: collView)
-        viewtrang.addContrainsWithVS(format: "H:|[v0]|", views: collView)
+            viewtrang.addContrainsWithVS(format: "H:|[v0]|", views: collView)
     }
     func setupMenubar(){
         view.addSubview(viewtrang)
